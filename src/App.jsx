@@ -63,7 +63,7 @@ export default function App() {
       <header className={`nav ${scrolled ? 'nav--solid' : ''}`}>
         <div className="container nav__inner">
           <a href="#top" className="logo">
-            <img className="logo__img" src="/logo-emblem.png" alt="" />
+            <img className="logo__img" src={`${import.meta.env.BASE_URL}logo-emblem.png`} alt="" />
             <span>Om Dental Clinic <small>{clinic.city}, Uttar Pradesh</small></span>
           </a>
           <nav className={`nav__links ${open ? 'is-open' : ''}`}>
@@ -102,7 +102,7 @@ export default function App() {
 
             <motion.div className="hero__portrait" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
               <div className="hero__ring" />
-              <img src="/dr-ravindra.png" alt={clinic.doctor} />
+              <img src={`${import.meta.env.BASE_URL}dr-ravindra.png`} alt={clinic.doctor} />
               <div className="hero__name">
                 <b>{clinic.doctor}</b>
                 <span>{clinic.title} · Dental Surgeon</span>
@@ -267,7 +267,7 @@ export default function App() {
       <footer className="footer">
         <div className="container footer__inner">
           <div className="footer__brand">
-            <img src="/logo-emblem.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}logo-emblem.png`} alt="" />
             <div>
               <b>Om Dental</b>
               <span>Implant, Aesthetics &amp; Laser Clinic</span>
